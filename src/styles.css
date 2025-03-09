@@ -223,3 +223,102 @@ summary {
 }
 
 /* MAIN CSS */
+:root {
+	/* Colors */
+	--color-primary: #2A3D45;
+	--color-secondary: #6F3E47;
+	--color-accent: #B87333;
+	--color-text: #FFFDD0;
+	--color-overlay: rgba(0,0,0,0.6);
+	--color-accent-hover: #9B5B27;
+	--color-disabled: #6D2E4666;
+  
+	/* Fonts */
+	--heading-font: "Cormorant Garamond", serif;
+	--body-font: "Montserrat", system-ui, sans-serif;
+	--script-font: "Great Vibes", cursive;
+  
+	/* Spacing */
+	--space-md: 2rem;
+	--border-radius: 8px;
+  
+	/* Effects */
+	--shadow-md: 0 4px 8px rgba(109,46,70,0.2);
+	--transition-duration: 0.3s;
+}
+
+body {
+	background-color: var(--color-primary);
+	min-height: 100vh;
+	font-family: var(--body-font);
+	color: var(--color-text);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: calc(1ex / 0.42);
+    margin: calc(1ex / 0.42) 0;
+	font-family: var(--script-font);
+}
+
+h2 {
+    font-size: 2em;
+    line-height: calc(1ex / 0.42);
+    margin: calc(1ex / 0.42) 0;
+	font-family: var(--heading-font);
+}
+
+p {
+    font-size: 1em;
+    line-height: calc(1ex / 0.32);
+    margin: calc(1ex / 0.32) 0;	
+	width: 30ch;
+    max-width: 100%;
+}
+
+img {
+	width: 100%;
+	height: 750px;
+	object-fit: cover;
+}
+
+#content {
+	background-color: var(--color-secondary);
+	box-shadow: var(--shadow-md);
+	display: grid;
+	grid-template-columns: 1fr 500px;
+	gap: var(--space-md);
+	align-items: start;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.left-content {
+	max-width: 700px;
+	padding: 2rem;
+}
+
+.flourish {
+	font-family: var(--script-font);
+	font-style: italic;
+}
+
+@media (max-width: 1023px) {
+	#content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	img {
+		height: auto;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}
